@@ -19,5 +19,23 @@ const _ = {
   },
   words(string) {
     return string.split(' ');
+  },
+  pad(string, length) {
+    if (length <= string.length) {
+      return string;
+    } else {
+      let startPaddingLength = Math.floor((length - string.length) / 2);
+      let endPaddingLength = length - startPaddingLength;
+      let paddedString =
+        ' ' * startPaddingLength + string + ' ' * endPaddingLength;
+      return paddedString;
+    }
+  },
+  has(object, key) {
+    let hasValue = object[key] != undefined;
+    return hasValue;
   }
 };
+
+module.exports = _;
+console.log(_pad('hi', 5));
