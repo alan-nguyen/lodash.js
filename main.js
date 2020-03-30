@@ -52,6 +52,13 @@ const _ = {
       }
     }
     return undefined;
+  },
+  drop(arr, n) {
+    if (n === undefined) {
+      n = 1;
+    }
+    let dropArr = arr.slice(n, arr.length);
+    return dropArr;
   }
 };
 
