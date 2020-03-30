@@ -34,6 +34,14 @@ const _ = {
   has(object, key) {
     let hasValue = object[key] != undefined;
     return hasValue;
+  },
+  invert(object) {
+    let invertedObject = {};
+    for (let key in object) {
+      let originalValue = object[key];
+      invertedObject = { originalValue: key };
+    }
+    return invertedObject;
   }
 };
 
